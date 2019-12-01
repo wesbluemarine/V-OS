@@ -34,7 +34,7 @@ macro( Application name )
 
 	# Add current dir headers
 	list (APPEND _APPLICATION_INCLUDES ${CMAKE_CURRENT_SOURCE_DIR})
-	target_include_directories(${name} PRIVATE ${_APPLICATION_INCLUDES})
+	target_include_directories(${name} PUBLIC ${_APPLICATION_INCLUDES})
 
 endmacro()
 
@@ -53,7 +53,7 @@ macro( Server name )
 	target_link_libraries(${name} PRIVATE ${_SERVER_LIBS})
 
 	list (APPEND _SERVER_INCLUDES ${CMAKE_CURRENT_SOURCE_DIR})
-	target_include_directories(${name} PRIVATE ${_SERVER_INCLUDES})
+	target_include_directories(${name} PUBLIC ${_SERVER_INCLUDES})
 
 endmacro()
 
@@ -71,7 +71,7 @@ macro( AddOn name type )
 
 	# Add current dir headers
 	list ( APPEND _ADDON_INCLUDES ${CMAKE_CURRENT_SOURCE_DIR} )
-	target_include_directories(${name} PRIVATE ${_ADDON_INCLUDES})
+	target_include_directories(${name} PUBLIC ${_ADDON_INCLUDES})
 
 endmacro()
 
