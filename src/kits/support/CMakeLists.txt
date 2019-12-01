@@ -22,7 +22,6 @@ target_sources(be PRIVATE
 	StopWatch.cpp
 	String.cpp
 	StringList.cpp
-	Url.cpp
 	Uuid.cpp
 	ZlibCompressionAlgorithm.cpp
 	ZstdCompressionAlgorithm.cpp
@@ -52,7 +51,6 @@ target_sources(be_bootstrap PRIVATE
 	StopWatch.cpp
 	String.cpp
 	StringList.cpp
-	#Url.cpp
 	Uuid.cpp
 	ZlibCompressionAlgorithm.cpp
 	ZstdCompressionAlgorithm.cpp
