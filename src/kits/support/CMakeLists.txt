@@ -22,7 +22,7 @@ target_sources(be PRIVATE
 	StopWatch.cpp
 	String.cpp
 	StringList.cpp
-	Url.cpp
+	#Url.cpp
 	Uuid.cpp
 	ZlibCompressionAlgorithm.cpp
 	ZstdCompressionAlgorithm.cpp
