@@ -299,6 +299,8 @@ __find_directory(directory_which which, dev_t device, bool createIt,
 	char* path = "/boot";
 #endif
 
+	printf("path %s\n", path);
+
 	/* fiddle with non-boot volume for items that need it */
 	switch (which) {
 		case B_DESKTOP_DIRECTORY:

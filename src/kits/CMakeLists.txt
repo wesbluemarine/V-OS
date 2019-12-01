@@ -2,13 +2,17 @@ AddOn(
 	be
 	SHARED
 
-	LIBS
-	root
-	linprog
-	icon
-	agg
-	icu
-	${ZLIB_LIBRARIES}
+	LIBS root linprog icon agg icu ${ZLIB_LIBRARIES}
+)
+
+AddOn(
+	be_bootstrap
+	STATIC
+
+	INCLUDES
+	"../../headers/private/interface/"
+
+	LIBS linprog icon agg icu ${ZLIB_LIBRARIES}
 )
 
 add_subdirectory(app)
