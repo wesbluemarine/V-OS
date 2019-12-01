@@ -27,3 +27,9 @@ target_sources(be PRIVATE
 	ZlibCompressionAlgorithm.cpp
 	ZstdCompressionAlgorithm.cpp
 )
+
+target_sources(bootstrap_be PRIVATE
+	List.cpp
+	Locker.cpp
+	String.cpp
+)

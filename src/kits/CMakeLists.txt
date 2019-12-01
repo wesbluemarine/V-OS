@@ -3,13 +3,20 @@ add_library(be SHARED "")
 file(GLOB_RECURSE privateHeaderFiles "${CMAKE_CURRENT_SOURCE_DIR}/*.h")
 
 target_sources(be PRIVATE
-    ${headerFiles}
-    ${privateHeaderFiles}
 )
 
-set_target_properties(be PROPERTIES LINKER_LANGUAGE CXX)
-
 target_link_libraries(be PUBLIC root linprog icon agg icu)
+
+
+add_library(bootstrap_be STATIC "")
+
+target_sources(bootstrap_be PRIVATE
+)
+
+target_include_directories(bootstrap_be PRIVATE
+	"../../headers/private/interface"
+)
+
 
 add_subdirectory(app)
 add_subdirectory(game)
