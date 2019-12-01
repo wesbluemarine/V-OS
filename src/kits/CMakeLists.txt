@@ -12,7 +12,7 @@ AddOn(
 	INCLUDES
 	"../../headers/private/interface/"
 
-	LIBS pthread linprog icon agg icu ${ZLIB_LIBRARIES}
+	LIBS ${ZLIB_LIBRARIES}
 )
 
 add_subdirectory(app)
