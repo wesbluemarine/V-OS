@@ -22,6 +22,4 @@ jobs:
     - name: configure
       run: cd generated.x86 && ../cmake-3.13.4-Linux-x86_64/bin/cmake .. -GNinja
     - name: ninja
-      run: cd generated.x86 && ninja
-    - name: check
-      run: ls generated.x64/external/icu-cmake/icu_host/bin/
+      run: cd generated.x86 && ninja && ls external/icu-cmake/icu_host/bin/
