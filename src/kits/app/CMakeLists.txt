@@ -35,3 +35,14 @@ target_sources(be PRIVATE
 	TokenSpace.cpp
 	TypeConstants.cpp
 )
+
+target_sources(be_bootstrap PRIVATE
+	Application.cpp
+	AppMisc.cpp
+	Looper.cpp
+	Message.cpp
+	MessageAdapter.cpp
+	Messenger.cpp
+	MessageUtils.cpp
+	TypeConstants.cpp
+)
