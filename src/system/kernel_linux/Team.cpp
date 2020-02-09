@@ -4,6 +4,7 @@
  */
 
 #include <errno.h>
+#include <stdio.h>
 
 #include "syscalls.h"
 
@@ -30,7 +31,12 @@ _kern_kill_team(team_id team)
 status_t
 _kern_get_team_info(team_id id, team_info *info)
 {
+	char proc_path[500];
 	info->team = id;
+	printf("id: %d\n", id);
+	sprintf(proc_path, "/proc/%d", id);
+	printf(proc_path);
+	printf("\n");
 	return B_OK;
 }
 

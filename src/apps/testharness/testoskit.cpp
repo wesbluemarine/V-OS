@@ -6,6 +6,7 @@
 #include <Looper.h>
 #include <Message.h>
 #include <OS.h>
+#include "syscalls.h"
 
 // Project Includes ------------------------------------------------------------
 
@@ -66,6 +67,11 @@ int main()
 	BMessenger(fLooper2).SendMessage('1234');
 
 	printf("Message '1234' sent, waiting for loopers\n");
+	
+	printf("Team_info");
+	team_info info; 
+	
+	_kern_get_team_info(9988, &info);
 
 	// Wait for loopers to finish
 	acquire_sem(gThreadLock);
