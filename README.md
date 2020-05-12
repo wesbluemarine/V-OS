@@ -39,10 +39,10 @@ In order to start you need to run the following commands from the generated.x64 
 
 ```bash
 ./src/apps/testharness/clean_shm.sh
-./generated.x64/src/servers/registrar/registrar &
-./generated.x64/src/servers/app/app_server &
-./generated.x64/src/servers/input/input_server.out & 
-./generated.x64/src/apps/deskbar/Deskbar &
+./generated.x86/src/servers/registrar/registrar &
+./generated.x86/src/servers/app/app_server &
+./generated.x86/src/servers/input/input_server & 
+./generated.x86/src/apps/deskbar/Deskbar &
 ```
 
 #### FAQ 
